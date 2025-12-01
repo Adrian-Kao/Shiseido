@@ -45,7 +45,7 @@ function Dashboard() {
             <MetricCard
               icon={<BarChart3 className="w-6 h-6" />}
               title="Completion Rate"
-              value="87.4%"
+              value="82%"
               change="+5.3%"
               positive={true}
               gradient="from-purple-400 to-teal-500"
