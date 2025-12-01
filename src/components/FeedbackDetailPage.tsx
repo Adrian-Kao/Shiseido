@@ -301,10 +301,7 @@ export default function FeedbackDetailPage() {
               <h3 className="text-lg font-semibold text-slate-900 mb-1">
                 {selectedProduct.name}
               </h3>
-              <p className="text-sm text-slate-600">
-                左側為真實用戶的文字回饋，右側為按產品類型客製化的評分維度。
-                用來說明「同一 TryMe Score 底下，產品到底好在哪裡」。
-              </p>
+
             </div>
             <div className="flex gap-4">
               <div className="text-right">
