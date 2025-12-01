@@ -16,7 +16,7 @@ function Dashboard() {
           <div className="flex items-center justify-between mb-2">
             <div>
               <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                TryMePack Analytics
+                Shiseido Analytics
               </h1>
               <p className="text-slate-600 text-lg">Enterprise Beauty Trial Intelligence Platform</p>
             </div>
