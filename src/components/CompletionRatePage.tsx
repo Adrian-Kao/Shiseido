@@ -1,3 +1,4 @@
+// src/components/CompletionRatePage.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -140,7 +141,7 @@ function getLargestDropoffStep(channel: Channel) {
   return "Survey Completed → Repurchase Intent";
 }
 
-export default function CompletionRatePage() {
+function CompletionRatePage() {
   const [selectedChannel, setSelectedChannel] = useState<Channel>(channels[0]);
   const overallCompletion = calcOverallCompletion();
   const bestChannel = [...channels].sort(
@@ -272,9 +273,7 @@ export default function CompletionRatePage() {
                 >
                   <div className="flex justify-between items-center mb-1">
                     <div>
-                      <p className="font-medium text-slate-800">
-                        {ch.name}
-                      </p>
+                      <p className="font-medium text-slate-800">{ch.name}</p>
                       <p className="text-xs text-slate-500">
                         {ch.trials.toLocaleString()} trials started
                       </p>
@@ -414,3 +413,4 @@ export default function CompletionRatePage() {
   );
 }
 
+export default CompletionRatePage;

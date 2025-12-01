@@ -7,7 +7,7 @@ import CompletionRatePage from "./components/CompletionRatePage";
 import AvgTrialDurationPage from "./components/AvgTrialDurationPage";
 import FeedbackDetailPage from "./components/FeedbackDetailPage";
 
-function App() {
+export default function App() {
   return (
     <Routes>
       {/* 首頁：總覽 Dashboard */}
@@ -24,5 +24,3 @@ function App() {
     </Routes>
   );
 }
-
-export default App;
