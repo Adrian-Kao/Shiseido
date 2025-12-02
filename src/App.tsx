@@ -7,6 +7,7 @@ import CompletionRatePage from "./components/CompletionRatePage";
 import AvgTrialDurationPage from "./components/AvgTrialDurationPage";
 import FeedbackDetailPage from "./components/FeedbackDetailPage";
 import ComparisonFilterPage from "./components/ComparisonFilterPage";
+import DemographicsDetailPage from "./components/DemographicDetailPage";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/unique-users" element={<UniqueUsersPage />} />
       <Route path="/completion-rate" element={<CompletionRatePage />} />
       <Route path="/avg-trial-duration" element={<AvgTrialDurationPage />} />
+      <Route path="/demographics" element={<DemographicsDetailPage/>} />
 
       {/* Feedback 細頁 */}
       <Route path="/feedback" element={<FeedbackDetailPage />} />

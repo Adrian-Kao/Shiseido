@@ -17,7 +17,7 @@ function TryMeScorePanel() {
             <Award className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-slate-800">TryMe Score Overview</h2>
+            <h2 className="text-2xl font-bold text-slate-800">January TryMe Score Overview</h2>
             <p className="text-slate-600 text-sm">Consumer sentiment & intent metrics</p>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function DemographicsPanel() {
   const ageGroups = [
@@ -24,6 +25,7 @@ function DemographicsPanel() {
   ];
 
   return (
+  <Link to="/demographics" className="block relative group h-full">
     <div className="relative group h-full">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-teal-400/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
       <div className="relative bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white/50 h-full flex flex-col">
@@ -87,6 +89,7 @@ function DemographicsPanel() {
         </div>
       </div>
     </div>
+  </Link>
   );
 }
 
