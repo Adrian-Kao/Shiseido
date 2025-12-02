@@ -6,6 +6,7 @@ import UniqueUsersPage from "./components/UniqueUsersPage";
 import CompletionRatePage from "./components/CompletionRatePage";
 import AvgTrialDurationPage from "./components/AvgTrialDurationPage";
 import FeedbackDetailPage from "./components/FeedbackDetailPage";
+import ComparisonFilterPage from "./components/ComparisonFilterPage";
 
 export default function App() {
   return (
@@ -21,6 +22,8 @@ export default function App() {
 
       {/* Feedback 細頁 */}
       <Route path="/feedback" element={<FeedbackDetailPage />} />
+      {/* Comparison Filter Page */}
+      <Route path="/comparison" element= {<ComparisonFilterPage/>}/> 
     </Routes>
   );
 }

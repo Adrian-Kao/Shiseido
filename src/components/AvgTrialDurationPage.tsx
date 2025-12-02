@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Clock,
@@ -156,8 +156,8 @@ export default function AvgTrialDurationPage() {
     selectedLine.longPct >= 40
       ? "過長試用比例偏高，需留意樣品被當作正品使用。"
       : selectedLine.longPct >= 25
-      ? "部分消費者傾向延長試用期，可考慮設定提醒或轉換方案。"
-      : "整體試用天數落在可控範圍，以觀察轉換率為主。";
+        ? "部分消費者傾向延長試用期，可考慮設定提醒或轉換方案。"
+        : "整體試用天數落在可控範圍，以觀察轉換率為主。";
 
   return (
     <div className="min-h-screen bg-slate-50 p-8">
@@ -263,11 +263,10 @@ export default function AvgTrialDurationPage() {
                 <button
                   key={line.id}
                   onClick={() => setSelectedLine(line)}
-                  className={`w-full text-left rounded-xl border px-4 py-3 transition-all ${
-                    isActive
-                      ? "bg-gradient-to-r from-teal-50 to-purple-50 border-teal-200 shadow-sm"
-                      : "bg-white border-slate-200 hover:bg-slate-50"
-                  }`}
+                  className={`w-full text-left rounded-xl border px-4 py-3 transition-all ${isActive
+                    ? "bg-gradient-to-r from-teal-50 to-purple-50 border-teal-200 shadow-sm"
+                    : "bg-white border-slate-200 hover:bg-slate-50"
+                    }`}
                 >
                   <div className="flex justify-between items-center mb-1">
                     <div className="pr-2">

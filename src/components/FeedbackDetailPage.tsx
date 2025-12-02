@@ -4,7 +4,7 @@ import { MessageCircle, Star, Filter, Smile, Frown } from "lucide-react";
 
 type MetricScore = {
   name: string;
-  score: number;   // 0–100
+  score: number; // 0–100
   benchmark?: number; // 可選，跟同類平均比
 };
 
@@ -22,7 +22,7 @@ type ProductFeedback = {
   id: string;
   name: string;
   category: "makeup-remover" | "cleanser" | "serum" | "mask" | "cream";
-  tryMeScore: number;   // 1–10
+  tryMeScore: number; // 1–10
   totalReviews: number;
   metrics: MetricScore[];
   reviews: Review[];
@@ -208,6 +208,178 @@ const feedbackData: ProductFeedback[] = [
       },
     ],
   },
+
+  // ===== 新增：對應 SentimentChart Keyword Focus 的產品 =====
+
+  {
+    id: "deep-toner",
+    name: "Deep Aqua Moist Toner",
+    // 沒有 toner 類別就先歸到 serum，主要是給文案用
+    category: "serum",
+    tryMeScore: 9.1,
+    totalReviews: 312,
+    metrics: [
+      { name: "Layering Comfort", score: 91, benchmark: 86 },
+      { name: "Hydration Longevity", score: 89, benchmark: 84 },
+      { name: "Stickiness", score: 75, benchmark: 79 },
+      { name: "Glow Boost", score: 87, benchmark: 82 },
+    ],
+    reviews: [
+      {
+        id: "r1",
+        user: "User 581",
+        market: "Taiwan",
+        date: "2025-09-05",
+        sentiment: "positive",
+        highlightTags: ["hydrating", "radiant"],
+        text: "Layers well using the 7-skin method, skin looks plump and radiant.",
+      },
+      {
+        id: "r2",
+        user: "User 990",
+        market: "Japan",
+        date: "2025-09-01",
+        sentiment: "positive",
+        highlightTags: ["absorption", "non-sticky"],
+        text: "Absorbs quickly and doesn't feel sticky even in humid weather.",
+      },
+      {
+        id: "r3",
+        user: "User 433",
+        market: "Singapore",
+        date: "2025-08-29",
+        sentiment: "neutral",
+        highlightTags: ["texture"],
+        text: "Texture is a bit thicker than I expected but still comfortable in the evening routine.",
+      },
+    ],
+  },
+  {
+    id: "sleep-gel",
+    name: "Hydro-Boost Sleeping Gel",
+    category: "cream",
+    tryMeScore: 9.0,
+    totalReviews: 275,
+    metrics: [
+      { name: "Overnight Hydration", score: 93, benchmark: 87 },
+      { name: "Cooling Feeling", score: 90, benchmark: 84 },
+      { name: "Oil Control in Morning", score: 85, benchmark: 80 },
+      { name: "Pillow Transfer", score: 74, benchmark: 78 },
+    ],
+    reviews: [
+      {
+        id: "r1",
+        user: "User 402",
+        market: "Singapore",
+        date: "2025-08-28",
+        sentiment: "positive",
+        highlightTags: ["refreshing", "cooling"],
+        text: "Cooling gel texture is perfect for hot nights, I wake up less oily.",
+      },
+      {
+        id: "r2",
+        user: "User 777",
+        market: "Thailand",
+        date: "2025-08-26",
+        sentiment: "positive",
+        highlightTags: ["glow", "hydrating"],
+        text: "Skin feels bouncy and well-rested in the morning, love the glow.",
+      },
+      {
+        id: "r3",
+        user: "User 118",
+        market: "Japan",
+        date: "2025-08-22",
+        sentiment: "neutral",
+        highlightTags: ["fragrance"],
+        text: "Hydration is great but I wish there was a fragrance-free version.",
+      },
+    ],
+  },
+  {
+    id: "repair-balm",
+    name: "Ultra Moist Repair Balm",
+    category: "cream",
+    tryMeScore: 8.7,
+    totalReviews: 241,
+    metrics: [
+      { name: "Dry Patch Repair", score: 95, benchmark: 88 },
+      { name: "Barrier Support", score: 92, benchmark: 86 },
+      { name: "Comfort on Sensitive Areas", score: 90, benchmark: 84 },
+      { name: "Makeup Compatibility", score: 78, benchmark: 80 },
+    ],
+    reviews: [
+      {
+        id: "r1",
+        user: "User 130",
+        market: "Japan",
+        date: "2025-08-20",
+        sentiment: "positive",
+        highlightTags: ["nourishing", "effective"],
+        text: "Saved my dry patches around the nose, very nourishing but not heavy.",
+      },
+      {
+        id: "r2",
+        user: "User 668",
+        market: "Taiwan",
+        date: "2025-08-18",
+        sentiment: "positive",
+        highlightTags: ["gentle", "soothing"],
+        text: "I only use a tiny amount at night and it keeps my skin calm.",
+      },
+      {
+        id: "r3",
+        user: "User 355",
+        market: "Hong Kong",
+        date: "2025-08-15",
+        sentiment: "neutral",
+        highlightTags: ["richness"],
+        text: "Great for targeted areas but too rich for full-face use in summer.",
+      },
+    ],
+  },
+  {
+    id: "cloud-essence",
+    name: "Cloud Dew Essence",
+    category: "serum",
+    tryMeScore: 9.0,
+    totalReviews: 198,
+    metrics: [
+      { name: "Lightweight Feel", score: 94, benchmark: 88 },
+      { name: "Glow Boost", score: 88, benchmark: 83 },
+      { name: "Layering Ease", score: 90, benchmark: 85 },
+      { name: "Hydration", score: 86, benchmark: 82 },
+    ],
+    reviews: [
+      {
+        id: "r1",
+        user: "User 509",
+        market: "Hong Kong",
+        date: "2025-08-10",
+        sentiment: "positive",
+        highlightTags: ["radiant", "lightweight"],
+        text: "Lightweight essence that gives a subtle glow, layers well under serum.",
+      },
+      {
+        id: "r2",
+        user: "User 911",
+        market: "Singapore",
+        date: "2025-08-08",
+        sentiment: "positive",
+        highlightTags: ["smooth", "luxurious"],
+        text: "Feels like a cloud on the skin, absorbs fast and leaves no film.",
+      },
+      {
+        id: "r3",
+        user: "User 244",
+        market: "Taiwan",
+        date: "2025-08-06",
+        sentiment: "neutral",
+        highlightTags: ["hydration"],
+        text: "Nice daily essence, though the hydration is more of a supporting step than a main moisturizer.",
+      },
+    ],
+  },
 ];
 
 function sentimentIcon(s: Review["sentiment"]) {
@@ -301,7 +473,6 @@ export default function FeedbackDetailPage() {
               <h3 className="text-lg font-semibold text-slate-900 mb-1">
                 {selectedProduct.name}
               </h3>
-
             </div>
             <div className="flex gap-4">
               <div className="text-right">

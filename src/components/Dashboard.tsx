@@ -1,17 +1,10 @@
-import {
-  TrendingUp,
-  Users,
-  BarChart3,
-  Globe,
-} from "lucide-react";
+import { TrendingUp, Users, BarChart3, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
-
 import MetricCard from "./MetricCard";
 import SentimentChart from "./SentimentChart";
 import ProductComparison from "./ProductComparison";
 import DemographicsPanel from "./DemographicsPanel";
 import ActivityTimeline from "./ActivityTimeline";
-import ESGPanel from "./ESGPanel";
 import FeedbackHighlights from "./FeedbackHighlights";
 import TryMeScorePanel from "./TryMeScorePanel";
 
@@ -19,10 +12,16 @@ function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50/20 to-teal-50/30">
       <div className="max-w-[1600px] mx-auto p-8">
+        {/* ====== Header 區：標題 + 按鈕，保持原本 ====== */}
+        {/* 你的 header 寫在這裡 */}
 
-        {/* ===== Top KPI Cards ===== */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-10">
+        {/* 🟣 1. TryMe Overview 先放在最上面（在四張卡片前面） */}
+        <div className="mb-8">
+          <TryMeScorePanel />
+        </div>
 
+        {/* 🟩 2. 四張 KPI Metric 卡片 */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           {/* Total Trials */}
           <Link to="/trials">
             <MetricCard
@@ -72,29 +71,19 @@ function Dashboard() {
           </Link>
         </div>
 
-        {/* ===== TryMe Score + ESG ===== */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-          <div className="lg:col-span-2">
-            <TryMeScorePanel />
-          </div>
-          <div>
-            <ESGPanel />
-          </div>
-        </div>
-
-        {/* ===== Sentiment + Feedback ===== */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+        {/* 🟦 3. Sentiment + Feedback */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <SentimentChart />
           <FeedbackHighlights />
         </div>
 
-        {/* ===== Product Comparison ===== */}
-        <div className="mb-10">
+        {/* 🟨 4. Product Comparison */}
+        <div className="mb-8">
           <ProductComparison />
         </div>
 
-        {/* ===== Timeline + Demographics ===== */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+        {/* 🟧 5. Timeline + Demographics */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="lg:col-span-2">
             <ActivityTimeline />
           </div>
@@ -102,7 +91,6 @@ function Dashboard() {
             <DemographicsPanel />
           </div>
         </div>
-
       </div>
     </div>
   );
