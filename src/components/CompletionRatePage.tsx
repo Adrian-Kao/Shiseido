@@ -1,5 +1,5 @@
 // src/components/CompletionRatePage.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   BarChart3,
@@ -265,11 +265,10 @@ function CompletionRatePage() {
                 <button
                   key={ch.id}
                   onClick={() => setSelectedChannel(ch)}
-                  className={`w-full text-left rounded-xl border px-4 py-3 transition-all ${
-                    isActive
-                      ? "bg-gradient-to-r from-teal-50 to-purple-50 border-teal-200 shadow-sm"
-                      : "bg-white border-slate-200 hover:bg-slate-50"
-                  }`}
+                  className={`w-full text-left rounded-xl border px-4 py-3 transition-all ${isActive
+                    ? "bg-gradient-to-r from-teal-50 to-purple-50 border-teal-200 shadow-sm"
+                    : "bg-white border-slate-200 hover:bg-slate-50"
+                    }`}
                 >
                   <div className="flex justify-between items-center mb-1">
                     <div>

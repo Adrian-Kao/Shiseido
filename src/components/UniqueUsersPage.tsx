@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Users,
@@ -258,11 +258,10 @@ export default function UniqueUsersPage() {
                     setSelectedCountry(c);
                     setSelectedAge(c.ageGroups[0]); // 切換國家時，年齡段也重設
                   }}
-                  className={`w-full text-left rounded-xl border px-4 py-3 transition-all ${
-                    isActive
+                  className={`w-full text-left rounded-xl border px-4 py-3 transition-all ${isActive
                       ? "bg-gradient-to-r from-teal-50 to-purple-50 border-teal-200 shadow-sm"
                       : "bg-white border-slate-200 hover:bg-slate-50"
-                  }`}
+                    }`}
                 >
                   <div className="flex justify-between items-center mb-1">
                     <div>
@@ -282,9 +281,8 @@ export default function UniqueUsersPage() {
                     <div
                       className="h-1.5 rounded-full bg-gradient-to-r from-teal-500 to-purple-500"
                       style={{
-                        width: `${
-                          (c.users / countryData[0].users) * 100
-                        }%`,
+                        width: `${(c.users / countryData[0].users) * 100
+                          }%`,
                       }}
                     />
                   </div>
@@ -353,21 +351,19 @@ export default function UniqueUsersPage() {
                 <div className="flex items-center gap-2 text-xs">
                   <span
                     onClick={() => setAgeViewMode("percent")}
-                    className={`cursor-pointer rounded-full px-2 py-1 ${
-                      ageViewMode === "percent"
+                    className={`cursor-pointer rounded-full px-2 py-1 ${ageViewMode === "percent"
                         ? "bg-slate-900 text-white"
                         : "bg-slate-100 text-slate-600"
-                    }`}
+                      }`}
                   >
                     %
                   </span>
                   <span
                     onClick={() => setAgeViewMode("users")}
-                    className={`cursor-pointer rounded-full px-2 py-1 ${
-                      ageViewMode === "users"
+                    className={`cursor-pointer rounded-full px-2 py-1 ${ageViewMode === "users"
                         ? "bg-slate-900 text-white"
                         : "bg-slate-100 text-slate-600"
-                    }`}
+                      }`}
                   >
                     Users
                   </span>
@@ -381,19 +377,18 @@ export default function UniqueUsersPage() {
                     ageViewMode === "percent"
                       ? `${age.percent}%`
                       : `${estimatedUsersForAge(
-                          age,
-                          selectedCountry
-                        ).toLocaleString()} users`;
+                        age,
+                        selectedCountry
+                      ).toLocaleString()} users`;
 
                   return (
                     <button
                       key={age.range}
                       onClick={() => setSelectedAge(age)}
-                      className={`w-full text-left rounded-xl px-3 py-2 transition-all ${
-                        active
+                      className={`w-full text-left rounded-xl px-3 py-2 transition-all ${active
                           ? "bg-gradient-to-r from-purple-50 to-teal-50"
                           : "bg-slate-50 hover:bg-slate-100"
-                      }`}
+                        }`}
                     >
                       <div className="flex justify-between text-xs mb-1">
                         <span className="font-medium text-slate-700">
@@ -443,8 +438,8 @@ export default function UniqueUsersPage() {
                   {selectedAge.range === "18-24"
                     ? "社群短影音與互動活動"
                     : selectedAge.range === "25-34"
-                    ? "多平台內容與會員體驗計畫"
-                    : "深度保養教育內容與線下體驗活動"}
+                      ? "多平台內容與會員體驗計畫"
+                      : "深度保養教育內容與線下體驗活動"}
                   ，提升回饋填寫率與回購意願。
                 </li>
                 <li>
